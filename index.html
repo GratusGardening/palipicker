@@ -299,7 +299,7 @@ Ferrero Collection Experience 20 Pieces 178g~A1~LS8~106895
 Fox's Where's My Elf Biscuits 5 x 20g~A1~LS8~92022
 Fox's Biscuits Brandy Snaps 100g~A1~LS8~34632
 McVitie's Family Circle Biscuit Selection 400g~A1~LS8~103122
-Jacob's The Selection 8 Cracker Varieties 900g~A1~LS8~58389
+Jacob's Biscuits for Cheese 8 Variety Assortment 300g~A1~LS8~72223
 Party Pretzel & Cracker Mix 220g~A1~LS9~105097
 Snack Factory Pigs in Blanket Flavoured Puffs 125g~A1~LS9~100531
 Pringles All The Way! 4 x 40g~A1~LS9~100595
@@ -580,6 +580,10 @@ Toby Carvery Mac 'N' Cheese 400g~A1~RF12~56706
 Toby Carvery Sausage & Mash Loaded Yorkie in a Rich Onion Gravy 400g~A1~RF12~56812
 Toby Carvery Slow Cooked Beef & Roasties Bake 400g~A1~RF12~56707
 Toby Carvery Slow Cooked Beef Loaded Yorkie 400g~A1~RF12~57982
+Toby Carvery Slow Roast Beef Yorkie Wrap~A1~RF12~57897  
+Toby Carvery Hunter's Chicken & Gammon Yorkie Wrap~A1~RF12~57898  
+Toby Carvery Chicken & Trimmings Ciabatta Melt~A1~RF12~57892  
+Toby Carvery The Whole Hog Ciabatta Melt~A1~RF12~57893
 Iceland 12 Beef Burgers~A1~RF13~52092
 Iceland 4 Beef Double Cheese & Bacon Burgers~A1~RF13~51624
 Iceland 4 Beef Double Cheese Burgers~A1~RF13~68431
@@ -929,8 +933,8 @@ Iceland 20 (Approx.) Onion Bhajis 300g~A2~LF1/LF2~49982
 Iceland 20 (Approx.) Vegetable Samosas 300g~A2~LF1/LF2~49983
 Iceland 30 (Approx.) Cheese & Onion Rolls 540g~A2~LF1/LF2~43014
 Iceland 30 (Approx.) Cocktail Sausages 360g~A2~LF1/LF2~51821
-Iceland 40 (Approx.) Mini Party Sausage Rolls 720g~A2~LF1/LF2~43016
-Iceland 40 (Approx.) Mini Party Sausage Rolls 720g~A2~LF1/LF2~94967
+Iceland 40pk (Approx.) Mini Party Sausage Rolls 720g~A2~LF1/LF2~43016
+Iceland 40pk (Approx.) Mini Party Sausage Rolls 720g~A2~LF1/LF2~94967
 Iceland 8 Mini Crispy Hoisin Duck Pancakes 200g~A2~LF1/LF2~41471
 Iceland 8 Satay Chicken Skewers 144g~A2~LF1/LF2~81367
 Iceland 8 Sticky Chicken Skewers 144g~A2~LF1/LF2~81708
@@ -1536,7 +1540,8 @@ Rustlers Chicken Sub~A4~F1_S6~16886
 Rustlers BBQ Rib~A4~F1_S6~103609
 Rustlers Cheese Burger~A4~F1_S6~52092
 Rustlers Double Decker~A4~F1_S6~68431
-Hot Dogs~A4~F1_S6~11502
+Flemmings 1 American Style Hotdog~A1~F2_S6~104773
+Flemmings 1 American Style Hotdog~A4~F1_S6~104773
 Flemmings Chicken Burgers~A4~F1_S6~44435
 Peperami Original Lunchbox Minis 10 x 10g~A4~F1_S6~44636
 Iceland British Mild Cheddar Slices~A4~F2_S1~77640
@@ -2400,6 +2405,7 @@ Cadbury Dairy Milk Chocolate Bar (345g)~A6~U5_S3~94312
 Cadbury Dairy Milk Fruit & Nut~A6~U5_S3~75424
 Cadbury Dairy Milk Fruit & Nut, Chocolate Bar (180g)~A6~U5_S3~94312
 Cadbury Dairy Milk Wholenut~A6~U5_S3~75425
+Cadbury Dairy Milk Whole nut~A6~U5_S3~75425
 Cadbury Dairy Milk Wholenut Chocolate Bar (180g)~A6~U5_S3~94312
 Cadbury Nutty Praline Crisp, More Chocolate Bar (180g)~A6~U5_S3~101652
 Galaxy Salted Caramel~A6~U5_S3~94271
@@ -3110,7 +3116,7 @@ function buildReport(){
  let now=new Date();let dateStr=now.toLocaleDateString('en-GB')+' '+now.toLocaleTimeString('en-GB');let startStr=START_TIME?START_TIME.toLocaleTimeString('en-GB'):dateStr;
  let pickedItems=[],parkedItems=[],whItems=[],todoItems=[];
  window.STATE.forEach(o=>{let st=getStatus(o.uid);let tm=TIMES[o.uid]||'';let line=(o.origIdx+1)+'. '+o.f.n+' | Aisle '+o.f.a+' Unit '+o.f.l+' | CODE '+ (o.f.c||'NEW') +' | QTY '+o.qty+' | '+st.toUpperCase()+(tm?' @ '+tm:'');if(st==='picked') pickedItems.push(line);else if(st==='parked') parkedItems.push(line);else if(st==='warehouse') whItems.push(line);else todoItems.push(line);});
- let txt='';txt+="PALiPiCKER PICK REPORT - KEEP ON PICKIN' - 260926\n";txt+='Date: '+dateStr+'\n';txt+='Start: '+startStr+'\n';txt+='Mode: '+MODE+'\n';txt+='Handset lines: '+window.STATE.length+'\n';txt+='----------------------------------------\n';txt+='PICKED ('+pickedItems.length+'):\n';pickedItems.forEach(l=>{txt+=l+'\n';});txt+='\nPARKED ('+parkedItems.length+'):\n';parkedItems.forEach(l=>{txt+=l+'\n';});txt+='\nWAREHOUSE CHECK ('+whItems.length+'):\n';whItems.forEach(l=>{txt+=l+'\n';});if(todoItems.length){txt+='\nUNPICKED - TODO ('+todoItems.length+'):\n';todoItems.forEach(l=>{txt+=l+'\n';});}txt+='\n----------------------------------------\n';txt+='Notes: Handset is master - this is assist record only\n';txt+="Generated offline by PALiPiCKER KEEP ON PICKIN' 260926\n";document.getElementById('reportTxt').value=txt;
+ let txt='';txt+="PALiPiCKER PICK REPORT - KEEP ON PICKIN' - 2026\n";txt+='Date: '+dateStr+'\n';txt+='Start: '+startStr+'\n';txt+='Mode: '+MODE+'\n';txt+='Handset lines: '+window.STATE.length+'\n';txt+='----------------------------------------\n';txt+='PICKED ('+pickedItems.length+'):\n';pickedItems.forEach(l=>{txt+=l+'\n';});txt+='\nPARKED ('+parkedItems.length+'):\n';parkedItems.forEach(l=>{txt+=l+'\n';});txt+='\nWAREHOUSE CHECK ('+whItems.length+'):\n';whItems.forEach(l=>{txt+=l+'\n';});if(todoItems.length){txt+='\nUNPICKED - TODO ('+todoItems.length+'):\n';todoItems.forEach(l=>{txt+=l+'\n';});}txt+='\n----------------------------------------\n';txt+='Notes: Handset is master - this is assist record only\n';txt+="Generated offline by PALiPiCKER KEEP ON PICKIN' 260926\n";document.getElementById('reportTxt').value=txt;
 }
 function saveReport(){
  buildReport();let txt=document.getElementById('reportTxt').value;let now=new Date();let fname='PALiPiCKER_KEEP_ON_PICKIN_300926_'+now.getFullYear()+(now.getMonth()+1).toString().padStart(2,'0')+now.getDate().toString().padStart(2,'0')+'_'+now.getHours().toString().padStart(2,'0')+now.getMinutes().toString().padStart(2,'0')+'.txt';let blob=new Blob([txt],{type:'text/plain'});let url=URL.createObjectURL(blob);let a=document.createElement('a');a.href=url;a.download=fname;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
