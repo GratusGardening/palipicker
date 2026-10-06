@@ -2947,7 +2947,7 @@ function findAll(name,code){
  let keyTokens=tokenize(name);if(!keyTokens.length)return [{n:name,a:'?',l:'??',c:cleanCode||'NEW'}];let scored=[];
  for(let k in DATA_MAP){let best=scoreMatch(name,k),entries=DATA_MAP[k];for(let e of entries){for(let al of (ALIASES_BY_CODE[e.c]||[])){let s=scoreMatch(name,al);if(s.score>best.score)best=s;}}if((best.common>=2||(keyTokens.length<=2&&best.common>=1))&&best.score>=0.5)scored.push({k,score:best.score,common:best.common,entries});}
  if(!scored.length){let fallback=[];for(let k in DATA_MAP){if(k.includes(key)||key.includes(k)){fallback=fallback.concat(DATA_MAP[k]);if(fallback.length>=6)break;}}return fallback.length?fallback.slice(0,6):[{n:name,a:'?',l:'??',c:cleanCode||'NEW'}];}
- scored.sort((a,b)=>b.score-a.score||b.common-a.common);let top=scored[0].score,best=[];for(let s of scored){if(s.score>=top-.15)best=best.concat(s.entries);if(best.length>=6)break;}let seen={},uniq=[];for(let e of best){let id=e.a+'|'+e.l+'|'+e.n+'|'+e.c;if(!seen[id]){seen[id]=1;uniq.push(e);}}return uniq;
+ scored.sort((a,b)=>b.score-a.score||b.common-a.common);let best=[];for(let s of scored){best=best.concat(s.entries);if(best.length>=6)break;}let seen={},uniq=[];for(let e of best){let id=e.a+'|'+e.l+'|'+e.n+'|'+e.c;if(!seen[id]){seen[id]=1;uniq.push(e);}}return uniq;
 }
 
 
