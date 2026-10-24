@@ -240,6 +240,49 @@ textarea#t{min-height:92px;border:2px solid #0a9b3b;border-radius:9px;font-size:
 </div>
 <script>
 const SOURCE_INVENTORY=[
+// ===== A5_FRIDGE1 — 40 new products =====
+{"n":"Arla Cravendale Filtered Fresh Semi Skimmed Milk 3L Fresher for Longer","c":"70774","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Whole Milk 3L Fresher for Longer","c":"70773","location":"A5_FRIDGE1"},
+{"n":"Iceland British Double Cream 300ml","c":"67723","location":"A5_FRIDGE1"},
+{"n":"Iceland British Semi-Skimmed Milk 3 Litres","c":"19507","location":"A5_FRIDGE1"},
+{"n":"Iceland British Skimmed Milk 2 Litres","c":"19495","location":"A5_FRIDGE1"},
+{"n":"Iceland British Whole Milk 3 Litres","c":"19506","location":"A5_FRIDGE1"},
+{"n":"Iceland Soured Cream & Chive Dip 200g","c":"94628","location":"A5_FRIDGE1"},
+{"n":"Caramel Squirty Cream","c":"46311","location":"A5_FRIDGE1"},
+{"n":"Dairy Squirty Cream","c":"4618","location":"A5_FRIDGE1"},
+{"n":"Elmlea Double Alternative to Cream 500ml","c":"104022","location":"A5_FRIDGE1"},
+{"n":"Elmlea Double Cream","c":"51796","location":"A5_FRIDGE1"},
+{"n":"Elmlea Double Cream Alternative","c":"51796","location":"A5_FRIDGE1"},
+{"n":"Elmlea Single Cream Alternative 270ml","c":"51797","location":"A5_FRIDGE1"},
+{"n":"Elmlea Whipped Squirty Double Cream Alternative","c":"106645","location":"A5_FRIDGE1"},
+{"n":"Iceland Lighter Sweetened Squirty Cream 250g","c":"67722","location":"A5_FRIDGE1"},
+{"n":"Iceland Sweetened Squirty Cream 250g","c":"67721","location":"A5_FRIDGE1"},
+{"n":"Sweetened Squirty Cream","c":"67721","location":"A5_FRIDGE1"},
+{"n":"Alpro Almond No Sugars","c":"94046","location":"A5_FRIDGE1"},
+{"n":"Alpro Soya High Protein","c":"94045","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Semi Skimmed Milk 2L Fresher for Longer","c":"29015","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Skimmed Milk 2L Fresher for Longer","c":"85794","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Whole Milk 2L Fresher for Longer","c":"29016","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Semi-Skimmed","c":"94043","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Whole Milk","c":"94044","location":"A5_FRIDGE1"},
+{"n":"Arla Lacto Free Semi-Skimmed","c":"94042","location":"A5_FRIDGE1"},
+{"n":"Arla LactoFREE Semi Skimmed Milk Drink 1L","c":"69967","location":"A5_FRIDGE1"},
+{"n":"Arla LactoFREE Whole Milk Drink 1L","c":"70850","location":"A5_FRIDGE1"},
+{"n":"Arla BOB Skimmed Milk 2L Tastes like Semi Skimmed","c":"73227","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Semi Skimmed Milk 1L Fresher for Longer","c":"101913","location":"A5_FRIDGE1"},
+{"n":"Arla Cravendale Filtered Fresh Whole Milk 1L Fresher for Longer","c":"101914","location":"A5_FRIDGE1"},
+{"n":"B.O.B Milk","c":"94048","location":"A5_FRIDGE1"},
+{"n":"Iceland British Semi-Skimmed Milk 1 Litre","c":"19491","location":"A5_FRIDGE1"},
+{"n":"Iceland British Semi-Skimmed Milk 1 Pint 568ml","c":"23448","location":"A5_FRIDGE1"},
+{"n":"Iceland British Whole Milk 1 Litre","c":"19487","location":"A5_FRIDGE1"},
+{"n":"Semi-Skimmed Milk 2 Pint","c":"11570","location":"A5_FRIDGE1"},
+{"n":"Whole Milk 2 Pint","c":"11571","location":"A5_FRIDGE1"},
+{"n":"Iceland British Semi-Skimmed Milk 2 Litres","c":"19492","location":"A5_FRIDGE1"},
+{"n":"Arla Big Milk Fresh Whole Milk 2L Vitamin Enriched for Kids 1+","c":"103378","location":"A5_FRIDGE1"},
+{"n":"Iceland British Whole Milk 2 Litres","c":"19489","location":"A5_FRIDGE1"},
+{"n":"Whole Milk 2L","c":"19492","location":"A5_FRIDGE1"},
+// ===== END A5_FRIDGE1 =====
+
 
 // ===== A1 INVENTORY — UPDATED FROM A1 INVENTORY WITH FORMULAS.xlsx =====
 
@@ -4763,7 +4806,7 @@ const SOURCE_INVENTORY=[
 {"n":"Aqua Roma Forest Fruits Still Flavoured Spring Water 4 x 500ml","c":"104887","location":"A5_RS5"},
 ];
 const DATA=SOURCE_INVENTORY;
-const STORE_ROUTE=["A1_RF1","A1_RF2","A1_RF3","A1_RS1","A1_RF4","A1_RS2","A1_RS3","A1_RS4","A1_LS1","A1_LS2","A1_LS3","A1_RF5","A1_RS5","A1_RF6","A1_RS6","A1_LF4","A1_LS4","A1_LF5","A1_LS5","A1_RF7","A1_RS7","A1_RF8","A1_RS8","A1_LF6","A1_LS6","A1_LF7","A1_LS7","A1_RF9","A1_RS9","A1_RF10","A1_RS10","A1_LF8","A1_LS8","A1_LF9","A1_LS9","A1_RF11","A1_RS11","A1_RF12","A1_RS12","A1_LF10","A1_LS10","A1_LF11","A1_RF13","A1_RS13","A1_RF","A1_RS","A1_S0","A1_VEG","A4_F1","A4_F2","A4_F3","A4_F4","A4_F5","A4_F6","A4_RF1","A4_RF2","A4_RF3","A5_U1","A5_U2","A5_U3","A5_RF1","A5_RS1","A5_RF2","A5_RS2","A5_RF3","A5_RS3","A5_U4","A5_U5","A5_LF5","A5_U6","A5_RF4","A5_RS4","A5_RF5","A5_RS5","A5_RF6","A5_RS6","A5_U7","A5_LF7","A5_LS7","A5_U8","A5_U9","A5_RF7","A5_RS7","A5_RF8","A5_RS8","A5_RF9","A5_RS9","A5_U10","A5_U11","A5_U12","A5_U13","A5_U14","A5_U15","A5_U16","A5_U17","A5_U18","A5_RF","A5_RS","A6_U1","A6_U2","A6_U3","A6_U4","A6_U5","A6_U6","A6_U7","A6_U8","A6_U9","A6_U10","A6_U11","A6_U12","A6_U","A3_RF1","A3_RF2","A3_RS1","A3_RS2","A3_LF1","A3_LF2","A3_LS1","A3_LS2","A3_RF3","A3_RF4","A3_RS3","A3_RS4","A3_LF3","A3_LF4","A3_LS3","A3_LS4","A3_RF5","A3_RF6","A3_RS5","A3_RS6","A3_LF5","A3_LF6","A3_LS5","A3_LS6","A3_RF7","A3_RF8","A3_RS7","A3_RS8","A3_LF7","A3_LF8","A3_LS7","A3_LS8","A3_RF9","A3_RS9","A3_LF9","A3_LS9","A3_RS","A3_LS","A1_F6","A1_F5","A1_F4","A1_F3","A1_F2","A1_F1","A1_F","A2_RF1","A2_RF2","A2_RS1","A2_RS2","A2_LF1","A2_LF2","A2_LS1","A2_LS2","A2_RF3","A2_RF4","A2_RS3","A2_RS4","A2_LF3","A2_LF4","A2_LS3","A2_LS4","A2_RF5","A2_RF6","A2_RS5","A2_RS6","A2_LF5","A2_LF6","A2_LS5","A2_LS6","A2_RF7","A2_RF8","A2_RS7","A2_RS8","A2_LF7","A2_LF8","A2_LS7","A2_LS8","A2_RF9","A2_RF10","A2_RS9","A2_RS10","A2_LF9","A2_LS9","A2_RF11","A2_RS11","A2_RS12","A2_RF","A2_RF?","A2_RS","A2_LS","A2_U17"];
+const STORE_ROUTE=["A1_RF1","A1_RF2","A1_RF3","A1_RS1","A1_RF4","A1_RS2","A1_RS3","A1_RS4","A1_LS1","A1_LS2","A1_LS3","A1_RF5","A1_RS5","A1_RF6","A1_RS6","A1_LF4","A1_LS4","A1_LF5","A1_LS5","A1_RF7","A1_RS7","A1_RF8","A1_RS8","A1_LF6","A1_LS6","A1_LF7","A1_LS7","A1_RF9","A1_RS9","A1_RF10","A1_RS10","A1_LF8","A1_LS8","A1_LF9","A1_LS9","A1_RF11","A1_RS11","A1_RF12","A1_RS12","A1_LF10","A1_LS10","A1_LF11","A1_RF13","A1_RS13","A1_RF","A1_RS","A1_S0","A1_VEG","A4_F1","A4_F2","A4_F3","A4_F4","A4_F5","A4_F6","A4_RF1","A4_RF2","A4_RF3","A5_FRIDGE1","A5_U1","A5_U2","A5_U3","A5_RF1","A5_RS1","A5_RF2","A5_RS2","A5_RF3","A5_RS3","A5_U4","A5_U5","A5_LF5","A5_U6","A5_RF4","A5_RS4","A5_RF5","A5_RS5","A5_RF6","A5_RS6","A5_U7","A5_LF7","A5_LS7","A5_U8","A5_U9","A5_RF7","A5_RS7","A5_RF8","A5_RS8","A5_RF9","A5_RS9","A5_U10","A5_U11","A5_U12","A5_U13","A5_U14","A5_U15","A5_U16","A5_U17","A5_U18","A5_RF","A5_RS","A6_U1","A6_U2","A6_U3","A6_U4","A6_U5","A6_U6","A6_U7","A6_U8","A6_U9","A6_U10","A6_U11","A6_U12","A6_U","A3_RF1","A3_RF2","A3_RS1","A3_RS2","A3_LF1","A3_LF2","A3_LS1","A3_LS2","A3_RF3","A3_RF4","A3_RS3","A3_RS4","A3_LF3","A3_LF4","A3_LS3","A3_LS4","A3_RF5","A3_RF6","A3_RS5","A3_RS6","A3_LF5","A3_LF6","A3_LS5","A3_LS6","A3_RF7","A3_RF8","A3_RS7","A3_RS8","A3_LF7","A3_LF8","A3_LS7","A3_LS8","A3_RF9","A3_RS9","A3_LF9","A3_LS9","A3_RS","A3_LS","A1_F6","A1_F5","A1_F4","A1_F3","A1_F2","A1_F1","A1_F","A2_RF1","A2_RF2","A2_RS1","A2_RS2","A2_LF1","A2_LF2","A2_LS1","A2_LS2","A2_RF3","A2_RF4","A2_RS3","A2_RS4","A2_LF3","A2_LF4","A2_LS3","A2_LS4","A2_RF5","A2_RF6","A2_RS5","A2_RS6","A2_LF5","A2_LF6","A2_LS5","A2_LS6","A2_RF7","A2_RF8","A2_RS7","A2_RS8","A2_LF7","A2_LF8","A2_LS7","A2_LS8","A2_RF9","A2_RF10","A2_RS9","A2_RS10","A2_LF9","A2_LS9","A2_RF11","A2_RS11","A2_RS12","A2_RF","A2_RF?","A2_RS","A2_LS","A2_U17"];
 const ROUTE_INDEX=Object.fromEntries(STORE_ROUTE.map((stop,index)=>[stop,index]));
 const LOAD_TEST=`Cathedral City 350g Mature Cheddar - 12425
 Little Duck 9 Pack classic Toilet Tissue - 102199
